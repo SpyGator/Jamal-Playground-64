@@ -1,15 +1,15 @@
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'Jamal')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Download')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Jimmy')">Tokyo</button>
 </div>
 
 <!-- Tab content -->
 <div id="London" class="tabcontent">
-  <h3>Jamal</h3>
-  <p>London is the capital city of England.</p>
+  <h3>Download</h3>
+  <p>Hi.</p>
 </div>
 
 <div id="Jamals Story" class="tabcontent">
@@ -17,7 +17,7 @@
   <p>Jamal Playground 64 is a Great Game.</p>
 </div>
 
-<div id="Tokyo" class="tabcontent">
+<div id="Jimmy Jackson" class="tabcontent">
   <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <p>Jimmy Jackson Is Very Very Cool.</p>
 </div>
