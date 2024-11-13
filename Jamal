@@ -1,9 +1,9 @@
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Jamal')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Download')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Jimmy')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'Jamal')">Jamal</button>
+  <button class="tablinks" onclick="openCity(event, 'Download')">Download</button>
+  <button class="tablinks" onclick="openCity(event, 'Jimmy')">Jimmy</button>
 </div>
 
 <!-- Tab content -->
