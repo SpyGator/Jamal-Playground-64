@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loading...</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,5 +11,19 @@
     <div class="spinner"></div>
     <p>Loading...</p>
   </div>
+
+  <!-- Content of the page (hidden initially) -->
+  <div class="content" style="display:none;">
+    <h1>Welcome to the Page!</h1>
+    <p>This is the content of the page after the loading screen disappears.</p>
+  </div>
+
+  <script>
+    // When the window finishes loading, hide the loader and show the content
+    window.onload = function() {
+      document.querySelector('.loader').style.display = 'none';  // Hide the loader
+      document.querySelector('.content').style.display = 'block';  // Show the content
+    };
+  </script>
 </body>
 </html>
