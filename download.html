@@ -3,16 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loading...</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Loading Screen</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      z-index: 9999;
+    }
+    #spinner {
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-top: 5px solid white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <!-- Loader Container -->
-  <div class="loader">
-    <!-- Spinner -->
-    <div class="spinner"></div>
-    <!-- Loading Text -->
-    <p class="loading-text">JAMAL PLAYGROUND 64 LOADING</p>
+  <div id="loading-screen">
+    <div id="spinner"></div>
+    <p>JAMAL PLAYGROUND 64 IS LOADING</p>
   </div>
 </body>
 </html>
