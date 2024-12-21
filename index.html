@@ -1,19 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body{
-        font-family:arial;
-      }
-    </style>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamal Playground 64</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .tab {
+      overflow: hidden;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    .tab a {
+      text-decoration: none;
+    }
+    .tab button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .tab button:hover {
+      background-color: #555;
+    }
+    .tab button.active {
+      background-color: #666;
+    }
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #ddd;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tabcontent h3 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
 <!-- Tab links -->
 <div class="tab">
- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> <button class="tablinks" onclick="openCity(event, 'Jamal')">Jamal</button></a>
- <a href="download.html"> <button class="tablinks" onclick="openCity(event, 'Download')">Download</button></a>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <button class="tablinks" onclick="openCity(event, 'Jamal')">Jamal</button>
+  </a>
+  <a href="download.html">
+    <button class="tablinks" onclick="openCity(event, 'Download')">Download</button>
+  </a>
   <button class="tablinks" onclick="openCity(event, 'Jimmy')">Jimmy</button>
-  
 </div>
 
 <!-- Tab content -->
@@ -21,24 +74,36 @@
   <h3>Download</h3>
   <p>Hi.</p>
 </div>
-jimmmmmmmmmmm blxm sub
 
-<div id="Jamals Story" class="tabcontent">
+<div id="Jamal" class="tabcontent">
   <h3>JAMAL</h3>
   <p>Jamal Playground 64 is a Great Game.</p>
 </div>
 
-<div id="Jimmy Jackson" class="tabcontent">
+<div id="Jimmy" class="tabcontent">
   <h3>Jimmy</h3>
   <p>Jimmy Jackson Is Very Very Cool.</p>
 </div>
-    <!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>Download</h3>
-  <p>Hi.</p>
-</div>
-jimmmmmmmmmmm blxm sub
-     body{
-        font-family:arial;
-</body>  
+
+<footer>
+  &copy; 2024 Jamal Playground 64. All Rights Reserved.
+</footer>
+
+<script>
+  function openCity(evt, cityName) {
+    // Hide all tabcontent elements
+    const tabcontents = document.querySelectorAll('.tabcontent');
+    tabcontents.forEach(content => content.style.display = 'none');
+
+    // Remove the active class from all buttons
+    const tablinks = document.querySelectorAll('.tab button');
+    tablinks.forEach(button => button.classList.remove('active'));
+
+    // Show the selected tab content and set the button as active
+    document.getElementById(cityName).style.display = 'block';
+    evt.currentTarget.classList.add('active');
+  }
+</script>
+
+</body>
 </html>
