@@ -1,109 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jamal Playground 64</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    .tab {
-      overflow: hidden;
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-    }
-    .tab a {
-      text-decoration: none;
-    }
-    .tab button {
-      background-color: #444;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .tab button:hover {
-      background-color: #555;
-    }
-    .tab button.active {
-      background-color: #666;
-    }
-    .tabcontent {
-      display: none;
-      padding: 20px;
-      margin: 10px;
-      border: 1px solid #ddd;
-      background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .tabcontent h3 {
-      margin-top: 0;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: lightcyan;
+            text-align: center;
+        }
+        .container {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .game {
+            height: 60vmin;
+            width: 60vmin;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5vmin;
+            justify-content: center;
+        }
+        .box {
+            height: 18vmin;
+            width: 18vmin;
+            border-radius: 1rem;
+            border: none;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+            font-size: 8vmin;
+            color: red;
+            background-color: yellow;
+        }
+        #reset {
+            padding: 1rem;
+            font-size: 1.25rem;
+            background: #191913;
+            color: white;
+            border-radius: 1rem;
+            border: none;
+        }
+        .box:hover {
+            background-color: chocolate;
+        }
+        #new-btn {
+            padding: 1rem;
+            font-size: 1.25rem;
+            background: #191913;
+            color: white;
+            border-radius: 1rem;
+            border: none;
+        }
+        #msg {
+            font-size: 8vmin;
+        }
+        .msg-container {
+            height: 30vmin;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-
-<!-- Tab links -->
-<div class="tab">
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-    <button class="tablinks" onclick="openCity(event, 'Jamal')">Jamal</button>
-  </a>
-  <a href="download.html">
-    <button class="tablinks" onclick="openCity(event, 'Download')">Download</button>
-  </a>
-  <button class="tablinks" onclick="openCity(event, 'Jimmy')">Jimmy</button>
-</div>
-
-<!-- Tab content -->
-<div id="Download" class="tabcontent">
-  <h3>Download</h3>
-  <p>Get ready to dive into the exciting world of Jamal Playground 64! Click the download button to start your journey.</p>
-</div>
-
-<div id="Jamal" class="tabcontent">
-  <h3>JAMAL</h3>
-  <p><strong>Jamal Playground 64</strong> is an adventurous and quirky sandbox game where players explore vibrant worlds, tackle unique challenges, and meet a cast of unforgettable characters. From solving puzzles to racing against time, there's always something thrilling to do in Jamal Playground 64!</p>
-</div>
-
-<div id="Jimmy" class="tabcontent">
-  <h3>Jimmy</h3>
-  <p>jayden likes jenny.</p>
-</div>
-
-<footer>
-  &copy; 2024 Jamal Playground 64. All Rights Reserved.
-</footer>
-
-<script>
-  function openCity(evt, cityName) {
-    // Hide all tabcontent elements
-    const tabcontents = document.querySelectorAll('.tabcontent');
-    tabcontents.forEach(content => content.style.display = 'none');
-
-    // Remove the active class from all buttons
-    const tablinks = document.querySelectorAll('.tab button');
-    tablinks.forEach(button => button.classList.remove('active'));
-
-    // Show the selected tab content and set the button as active
-    document.getElementById(cityName).style.display = 'block';
-    evt.currentTarget.classList.add('active');
-  }
-</script>
-
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <button id="new-btn">New Game</button>
+    </div>
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <button id="reset">Reset Game</button>
+    </main>
 </body>
 </html>
